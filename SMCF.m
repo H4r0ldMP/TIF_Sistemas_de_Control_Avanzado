@@ -1,5 +1,5 @@
 function dx = SMCF(t,x)% t,x entradas y dx=x1dot,x2dot salidas
-c1 = 1; eta = 1.1; k = 10; L = 4; v1 = 60;  rho = 0.001;
+c1 = 1; eta = 1.1; k = 10; L = 4; v1 = 20;  rho = 0.01;
 m = 1525;  a = 1.1; b = 1.67; Ca = 67; Cb = 67; Iz = 2305;
 %val_des = 0.25;
 %val_des1 = 0;

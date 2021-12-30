@@ -1,7 +1,7 @@
 clc;clear all; close all;
 [t,x] = ode45(@SMCF,[0 20],[-2 -2]);
 u = zeros(length(t),1);
-c1 = 1; eta = 1.1; k = 10; L = 4; v1 = 60;  rho = 0.001;
+c1 = 1; eta = 1.1; k = 10; L = 4; v1 = 20;  rho = 0.01;
 m = 1525;  a = 1.1; b = 1.67; Ca = 67; Cb = 67; Iz = 2305;
 for i=1:length(t)
 %val_des = 0.25;
@@ -26,12 +26,14 @@ end
 figure(1)
 plot(t,sin(t),'linewidth',1.5)
 hold on
+grid
 plot(t,x(:,1),':r','linewidth',1.5)
 ylabel('\theta (rad)');xlabel('time(s)');
-legend('ref signal','\theta value')
-ylim([-6 6])
-title('Tracking 60 ms')
+legend('Señal de referencia','Valor de \theta')
+title('Tracking')
 figure(2)
 plot(t,u)
+grid
 ylabel('u');xlabel('time(s)');
 title('Ley de Control')
+
